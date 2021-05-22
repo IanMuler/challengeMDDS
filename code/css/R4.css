@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul{
+    width: 100%;
+    text-align: left;
+    display: flex; /* Para tener los <li> en horizontal */
+}
+
+#ul_head{
+    font-weight: bold;
+}
+
+li{
+    flex: 1; /* Para que cada <li> ocupe el mismo espacio */
+    list-style: none;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+li img{
+    width: 100%;
+    height: auto;
+}
+
+li button{
+    padding: 5px;
+}
+
+.li_title{
+    font-weight: bold;
+}
+
+.li_description{
+    flex: 2; /* Así ocupa el doble que otros <li> */
+}
+
+#btn_previous, #btn_next {  
+display: none; /* Esconde botones en vista de escritorio */
+}
+
+
+
+@media screen and (max-width:800px){
+    
+    body{
+        top:0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        position: absolute; /* Ocupa el 100% del tamaño de la pantalla */
+        display: flex;
+        flex-wrap: wrap;
+        overflow: hidden; /* Esconde el scroll entre las listas y solo se accede a través de los botones */
+    }
+    ul{
+        width:70%;
+        height: 100%;
+        margin-left: 30%; /* Para dejar las columnas del lado derecho de la pantalla */
+        flex-direction: column;
+        justify-self: flex-end;
+        position:relative;
+    }
+
+    #ul_head{
+        width:100%;
+        position:fixed;
+        margin-left: 0;
+    }
+
+    .li_img{
+        justify-content: center;
+    }
+
+    .li_description{
+        overflow-y: scroll;
+    }
+
+    li img{
+        height: 70px;
+        width: auto;
+    }
+
+    #ul_head li{
+        border-bottom: 1px solid rgba(128, 128, 128, 0.493);
+    }
+
+    #btn_previous, #btn_next {
+        display: block;
+        position: fixed;
+        padding: 3px;
+        border-radius: 5px;
+        cursor: pointer;
+        z-index:1;
+    }
+    
+    #btn_previous a, #btn_next a{
+    text-decoration: none;
+    color: black;
+    }
+
+    #btn_previous{
+        top: 20px;
+        right: 20px;
+    }
+
+    #btn_next{
+        bottom: 20px;
+        right: 20px;
+    }
+}
