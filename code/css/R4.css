@@ -43,7 +43,31 @@ li button{
 display: none; /* Esconde botones en vista de escritorio */
 }
 
+/* Loading... */
 
+@keyframes rotate {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#loading {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#loading img{
+    width: 80px;
+    animation: rotate 0.5s infinite;
+    animation-timing-function: linear;
+    margin-bottom: 200px;
+    filter:brightness(0)
+}
 
 @media screen and (max-width:800px){
     
@@ -110,3 +134,4 @@ display: none; /* Esconde botones en vista de escritorio */
         right: 20px;
     }
 }
+
