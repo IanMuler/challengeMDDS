@@ -1,5 +1,7 @@
-const API = "http://api.mediastack.com/v1/news?access_key=d00c9272adf7c8b7cc4230e03f54b22d&keywords=tennis"
+const API = "https://cors-anywhere.herokuapp.com/http://api.mediastack.com/v1/news?access_key=d00c9272adf7c8b7cc4230e03f54b22d&keywords=tennis"
 const body = document.getElementById('body');
+
+// https://cors-anywhere.herokuapp.com/ => hace que la API sea tomada en GitHub pages como HTTPS
 
 fetch(API)
 .then(response => response.json())
