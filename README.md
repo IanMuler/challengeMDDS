@@ -2,10 +2,6 @@
  Prueba con el objetivo primordial de identificar las capacidades de resolución de problemas en el 
 desarrollo de aplicaciones y las habilidades en programación.
 
-Con el fin de facilitar la visualización de los ejercios se realizó un index.html alojado en una GitHub page.
-
-https://ianmuler.github.io/challengeMDDS
-
 ## Solicitud R2
 Se realizó una web R2.html, maquetando una tabla de datos de ejemplo, teniendo en cuenta responsive mobile, tablet y web, solo utilizando html y css.
 
