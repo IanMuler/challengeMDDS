@@ -76,13 +76,10 @@ display: none; /* Esconde botones en vista de escritorio */
         justify-content: center;
     }
 
-    .li_description{
-        overflow-y: scroll;
-    }
-
     li img{
         height: 70px;
-        width: auto;
+        width: 70px;
+        object-fit: cover;
     }
 
     #ul_head li{
