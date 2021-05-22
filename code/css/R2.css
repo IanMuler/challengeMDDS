@@ -24,7 +24,7 @@ li{
 display: none; /* Esconde botones en vista de escritorio */
 }
 
-@media screen and (max-width:400px){
+@media screen and (max-width:500px){
     
     body{
         top:0;

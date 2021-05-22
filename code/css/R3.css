@@ -119,7 +119,7 @@ section{
 
 }
 
-@media screen and (max-width:400px){ /*Mobile*/
+@media screen and (max-width:500px){ /*Mobile*/
 
     section{
         padding: 0;
