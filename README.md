@@ -28,7 +28,7 @@ Se creó un pagina R4.html para consumir un servicio gratuito de datos. La infor
 
 * APIs de referencia:
     * API de clima: https://weatherstack.com/product
-    * API de noticias: https://mediastack.com/produc
+    * API de noticias: https://mediastack.com/product
 
 ### Resolución:    
 
