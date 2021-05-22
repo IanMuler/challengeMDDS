@@ -1,15 +1,17 @@
 const API = "https://cors-anywhere.herokuapp.com/http://api.mediastack.com/v1/news?access_key=d00c9272adf7c8b7cc4230e03f54b22d&keywords=tennis"
+// https://cors-anywhere.herokuapp.com/ => hace que la API sea tomada en GitHub pages como HTTPS
+
 const body = document.getElementById('body');
 const loading = document.getElementById('loading')
-
-// https://cors-anywhere.herokuapp.com/ => hace que la API sea tomada en GitHub pages como HTTPS
+const btnPrevious = document.getElementById('btn_previous')
+const btnNext = document.getElementById('btn_next')
 
 fetch(API)
 .then(response => response.json())
 .then(data => printHTML(data))
 
 function printHTML(data){
-    const APIdata = data.data.filter(news => (news.image)? true : false)
+    const APIdata = data.data.filter(news => (news.image)? true : false) // filtra noticias sin imagen
     loading.remove()
     let count = 1;
 
@@ -33,15 +35,13 @@ function printHTML(data){
 
 // buttons functions (vista TABLET-MOBILE)
 
-const btnPrevious = document.getElementById('btn_previous')
-const btnNext = document.getElementById('btn_next')
-
 window.addEventListener('resize', () => { // listener para acomodar el scroll cuando pasa a vista TABLET o menor
     if(body.offsetWidth <= 800) window.scroll(0,0) 
     }) 
 
 btnPrevious.addEventListener('click', () => {
-    listHeight = body.offsetHeight;  // height de cada lista
+    const listHeight = body.offsetHeight;  // height de cada lista
+
     if(window.scrollY > 0){
         window.scrollY -= listHeight // valor para hacer scroll una lista atrás
     } else {
@@ -51,7 +51,8 @@ btnPrevious.addEventListener('click', () => {
 })
 
 btnNext.addEventListener('click', () => {
-    listHeight = body.offsetHeight;
+    const listHeight = body.offsetHeight;
+
     if(window.scrollY < body.scrollHeight - listHeight){
         window.scrollY += listHeight
     } else {
